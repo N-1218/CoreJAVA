@@ -1,47 +1,39 @@
-package array;
+package Array;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class array_single {
-	
-	public void accept() {
-		for(int index = 0;index<4;index++) {
-		Scanner sc= new Scanner(System.in);
-		System.out.println("Enter values");
-		int num = sc.nextInt();
-		sc.nextLine();
-		}
-	}
-	public void display() {
-		for(int index = 0;index<4;index++) {
-			
-		System.out.println(" "+index);
-		}
-	}
+    
+    // Method to accept user input and store it in an array
+    public void accept(int[] arr) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter " + arr.length + " integer values:");
+        for (int index = 0; index < arr.length; index++) {
+            System.out.print("Enter value for index " + index + ": ");
+            arr[index] = sc.nextInt();
+        }
+        // It's good practice to close the scanner when done, but for this simple program,
+        // it's acceptable to leave it open if it will be used again.
+        // For a single method, closing is better.
+        sc.close(); 
+    }
+    
+    // Method to display the contents of an array
+    public void display(int[] arr) {
+        System.out.println("Displaying array elements:");
+        for (int index = 0; index < arr.length; index++) {
+            System.out.println("Element at index " + index + ": " + arr[index]);
+        }
+        // Alternatively, use the built-in Arrays.toString() for a cleaner output
+        // System.out.println("Array contents: " + Arrays.toString(arr));
+    }
 
-	public static void main(String[] args) {
-	 /*int arr[]=new int[] {1,2,3};
-	 System.out.println(arr);*/
-		/*String name[]=new String[] {"Hello","Pune","!"};
-		System.out.println();
-		System.out.println(name.toString());//@65b3120a*/
-		
-		
-		/*int number[]=new int[3];
-		number[0]=12;
-		number[1]=18;
-		number[2]=1;
-		System.out.println();
-		System.out.println(Arrays.toString(number));*/
-		
-		array_single as=new array_single();
-		int num[]=new int[4];
-		as.accept();
-		as.display();
-		
-		
-
-	}
-
+    public static void main(String[] args) {
+        array_single as = new array_single();
+        int[] num = new int[4]; // Declare and initialize the array
+        
+        as.accept(num);  // Pass the array 'num' to the accept method
+        as.display(num); // Pass the array 'num' to the display method
+    }
 }
