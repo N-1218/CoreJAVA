@@ -1,10 +1,8 @@
-package Stream_API;
-
-import java.util.List;
-import java.util.Vector;
+package stream_API;
 
 public class API_1 {
-    public static void main(String[] args) {
+    
+public static void main(String[] args) {
 		List<Integer>numbers=new Vector<Integer>();
 		numbers.add(1);
 		numbers.add(2);

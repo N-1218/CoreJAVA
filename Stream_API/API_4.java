@@ -1,10 +1,11 @@
-package Stream_API;
+package stream_API;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class API_4 {
-    public static void main(String[] args) {
+    
+public static void main(String[] args) {
 		Set <Integer>set=new HashSet<Integer>();
 		set.add(1);
 		set.add(2);
@@ -18,4 +19,6 @@ public class API_4 {
 		set.stream().filter((i)->{return i%3==0;}).forEach((i)->{System.out.println(i);});
 
 	}
+
 }
+

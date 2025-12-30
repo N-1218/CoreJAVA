@@ -1,10 +1,8 @@
-package Stream_API;
-
-import java.util.List;
-import java.util.Stack;
+package stream_API;
 
 public class API_3 {
-    public static void main(String[] args) {
+    
+public static void main(String[] args) {
 		List <String>name=new Stack<String>();
 		name.add("Namrata");
 		name.add("Sakshi");
@@ -16,4 +14,5 @@ public class API_3 {
 		System.out.println(name);
 		name.stream().filter((i)->{return i.endsWith("a");}).forEach((i)->{System.out.println(i.toUpperCase());});
 	}
+
 }

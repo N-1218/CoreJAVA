@@ -1,7 +1,7 @@
 package Lambda;
 
 public class functional1 {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
     	//1
      Students<String>stud=(i,j)->{return i+" "+j; };
      System.out.println("Student name : "+stud.Attendance("Namrata", "Malusare"));
@@ -57,4 +57,6 @@ public class functional1 {
 interface Students<T>{
     T Attendance(T t1,T t2);
 }
+
+
 
