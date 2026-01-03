@@ -1,10 +1,5 @@
-package Multi_Threading;
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class Thread1 {
-public static void main(String[] args) {
+public class Thread2 {
+    public static void main(String[] args) {
 		
 		Reso r1 = new Reso();
 		
@@ -12,7 +7,12 @@ public static void main(String[] args) {
 		Consumer p2 = new Consumer(r1);
 		
 		p1.start();
-		p2.start();		
+		p2.start();
+		
+		
+
+
+			
   }
 }
 
@@ -26,6 +26,8 @@ class Reso{
 		System.out.println("adding element");
 		list.add(10);
 		System.out.println("element is added");
+		
+		
 		}
 	}
 	
@@ -35,6 +37,8 @@ class Reso{
 		System.out.println("removing the element..");
 		list.remove(0);
 		System.out.println("element is removed..");
+		
+		
 		}
 	}
 }
@@ -52,7 +56,7 @@ class Producer extends Thread{
 			Thread.sleep(500);
 			res.add();
 		} catch (InterruptedException e) {
-			
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -64,6 +68,8 @@ class Consumer extends Thread{
 Reso res;
 	
 	public Consumer(Reso res) {
+		
+		
 		this.res = res;
 	}
 	
@@ -72,9 +78,10 @@ Reso res;
 			Thread.sleep(5000);
 			res.remove();
 		} catch (InterruptedException e) {
-		
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 }
- 
+
+
